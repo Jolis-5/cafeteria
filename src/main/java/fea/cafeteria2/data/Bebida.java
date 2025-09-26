@@ -1,18 +1,59 @@
 package fea.cafeteria2.data;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "tBebida")
 
 public class Bebida {
 
-    private int id;
+    @Id
+    @Column(name = "idBebida")
+    private int idBebida;
+
+    @Column(name = "nombre")
     private String nombre;
+
+    @Column(name = "descripcion")
     private String descripcion;
+
+    @Column(name = "idTipoBebida")
     private int idTipoBebida;
 
-    public int getId() {
-        return id;
+    public int getIdBebida() {
+        return idBebida;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setIdBebida(int idBebida) {
+        this.idBebida = idBebida;
     }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getDescripcion() {
+        return descripcion;
+    }
+
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
+    }
+
+    public int getIdTipoBebida() {
+        return idTipoBebida;
+    }
+
+    public void setIdTipoBebida(int idTipoBebida) {
+        this.idTipoBebida = idTipoBebida;
+    }
+
 }
+
 
